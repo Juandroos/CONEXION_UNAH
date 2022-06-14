@@ -13,8 +13,10 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 
 
+
 @NgModule({
   declarations: [
+<<<<<<< HEAD
     AppComponent,
     RegistrarUsuarioComponent,
     ListaUsuariosComponent
@@ -26,8 +28,14 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    AppComponent
+
   ],
-  providers: [],
+
+  providers: [
+  
+>>>>>>> f656aadbe10cae8e639b2d6e4bc61c39385eee4d
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
