@@ -3,12 +3,11 @@ body{
 background: #D3CCE3;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 
 .titulo-lista{
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-family: 'Chivo', sans-serif;
 }
 
@@ -19,7 +18,7 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, F
 	font-size: 1.2rem;
 }
 
-a {
+a{
     color: #0d6efd;
     text-decoration: none;
 }

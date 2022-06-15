@@ -1,8 +1,9 @@
-<div class="container mt-5">
+<div class="container mt-5 div-registro">
     <div class="row">
-      <div class="col-lg-6 ">
+      <div class="col-lg-6 div-formulario">
         <div class="card-body">
-          <span class="titulo text-center titulo-lista"> {{titulo}}</span> <br>
+          <h2 class="titulo text-center titulo-lista"> {{titulo}}</h2>
+          <p class="msg-peq">hola</p>
           <form class="cuerpo-formulario mt-3" [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
               <div class="mb-3">
                   <label for="dni" class="form-label">DNI</label>
@@ -125,7 +126,7 @@
   
        <!-- //ANOTHER -->
        <div class="col-lg-6">
-          <img class="media1 d-flex mr-3" src="../../../assets/img/fondo_body.jpg" alt="Generic placeholder image">
+          <img class="media1 d-flex mr-3" src="../../../assets/img/registro-usuario/voluntariado3.jpg" alt="Generic placeholder image">
       
       </div>
   

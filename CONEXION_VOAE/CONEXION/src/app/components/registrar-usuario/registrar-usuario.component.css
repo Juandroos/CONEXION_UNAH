@@ -14,6 +14,22 @@
 	background: #1b6161;
     background-repeat: no-repeat;
     background-position: center;
-    height: 1500px;
-    width: 100%;
+    height: 1250px;
+    width: 117.5%;
+}
+
+.div-registro{
+    margin-top: 0% !important;
+}
+.div-formulario{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.titulo-lista{
+    text-align: center!important;
+}
+.msg-peq{
+    font-size: 0.5px;
+    color: darkgrey;
 }
