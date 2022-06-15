@@ -14,7 +14,7 @@
 	background: #1b6161;
     background-repeat: no-repeat;
     background-position: center;
-    height: 1250px;
+    height: 1340px;
     width: 117.5%;
 }
 
@@ -23,7 +23,7 @@
 }
 .div-formulario{
     padding-top: 30px;
-    padding-left: 20px;
+    padding-right: 30px;
 }
 
 .titulo-lista{
@@ -32,4 +32,11 @@
 .msg-peq{
     font-size: 0.5px;
     color: darkgrey;
+}
+.img-log{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display:block;
+margin:auto;
 }

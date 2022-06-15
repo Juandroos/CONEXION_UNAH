@@ -10,3 +10,10 @@
     font-weight: bolder;
     border-radius: 20px;
 }
+
+.footer-azul{
+    background-color: #065471!important;
+    color: white;
+    padding: 20px;
+    margin-top: 0px;
+}
