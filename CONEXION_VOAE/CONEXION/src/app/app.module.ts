@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { InicioComponent } from './inicio/inicio.component';
     RegistrarUsuarioComponent,
     ListaUsuariosComponent,
     InicioComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

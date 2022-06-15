@@ -8,7 +8,7 @@
           <form class="cuerpo-formulario mt-3" [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
               <div class="mb-3">
                   <label for="dni" class="form-label">DNI</label>
-                  <input type="number" class="form-control" id="dni" formControlName="dni"/>
+                  <input type="number" class="form-control" id="dni" formControlName="dni" placeholder="0000-0000-00000"/>
                   <div class="text-danger"
                   *ngIf="usuarioForm.controls['dni'].hasError('required')  && usuarioForm.controls['dni'].touched">
                       <span>El numero de identidad <strong>es obligatorio.</strong></span>
