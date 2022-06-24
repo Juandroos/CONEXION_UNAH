@@ -8,7 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', component: ListaUsuariosComponent},
+  { path: '', component: LandingPageComponent},
   { path: 'registrar-usuario',component: RegistrarUsuarioComponent},
   { path: 'editar-usuario/:id', component:RegistrarUsuarioComponent},
   { path: 'login', component:LoginComponent},
