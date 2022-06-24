@@ -1,5 +1,6 @@
 const { json } = require("express");
 const Usuario = require("../models/Usuario");
+const emailer = require('../config/emailer');
 
 exports.crearUsuario = (req, res) => {
 try {
@@ -10,6 +11,7 @@ try {
     
     usuario.save();//elimine await
     res.send(usuario);
+    emailer.sendMail(usuario);
 
 } catch (error) {
     console.log(error);
