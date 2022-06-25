@@ -15,6 +15,7 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { InicioComponent } from './inicio/inicio.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
+import { CorreoComponent } from './correo/correo.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { LoginComponent } from './components/login/login.component';
     InicioComponent,
     LandingPageComponent,
     LoginComponent,
+    CorreoComponent,
   ],
   imports: [
     BrowserModule,
