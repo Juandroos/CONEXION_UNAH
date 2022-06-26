@@ -6,11 +6,12 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { CorreoComponent } from './correo/correo.component';
+import { CorreoComponent } from './components/correo/correo.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
   { path: 'inicio', component: LandingPageComponent},
+  { path: 'lista-usuarios', component: ListaUsuariosComponent},
   { path: 'registrar-usuario',component: RegistrarUsuarioComponent},
   { path: 'editar-usuario/:id', component:RegistrarUsuarioComponent},
   { path: 'correo',component:CorreoComponent},
