@@ -16,6 +16,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './correo/correo.component';
+import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { CorreoComponent } from './correo/correo.component';
     LandingPageComponent,
     LoginComponent,
     CorreoComponent,
+    ConstanciasInterfazComponent,
   ],
   imports: [
     BrowserModule,

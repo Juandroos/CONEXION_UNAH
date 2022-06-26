@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CorreoComponent } from './correo/correo.component';//ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS!
 import { InicioComponent } from './components/inicio/inicio.component';
+import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'correo',component:CorreoComponent},
   { path: 'login', component:LoginComponent},
   { path: 'landing-page', component:LandingPageComponent},
+  { path: 'constancias-interfaz', component:ConstanciasInterfazComponent},
   { path: 'inicio', component:InicioComponent},
   { path: '**', redirectTo:'', pathMatch: 'full'}//DEBE SER SIEMPRE LA ULTIMA
 
