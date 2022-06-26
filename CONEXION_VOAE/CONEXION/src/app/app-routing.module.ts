@@ -6,7 +6,12 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+<<<<<<< Updated upstream
 import { CorreoComponent } from './components/correo/correo.component';
+=======
+import { CorreoComponent } from './correo/correo.component';//ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
+import { InicioComponent } from './components/inicio/inicio.component';
+>>>>>>> Stashed changes
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
