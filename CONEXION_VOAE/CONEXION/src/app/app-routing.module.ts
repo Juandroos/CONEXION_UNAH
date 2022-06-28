@@ -7,10 +7,13 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CorreoComponent } from './components/correo/correo.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+
 import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
+
+//ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
+import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },

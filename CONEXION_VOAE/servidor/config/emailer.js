@@ -175,17 +175,18 @@ a[x-apple-data-detectors] {
 
 `
 
-const createTrans = () => {
-    var transport = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: 'b.u.mbu62@gmail.com',
-            pass: 'koeglpuoasoiumom',
-        },
-    })
-    return transport
+
+const createTrans = ()=>{
+	var transport = nodemailer.createTransport({
+  		host: "smtp.gmail.com",
+  		port: 465,
+  		secure:true,
+  		auth: {
+    		user: "conexion.voae@gmail.com",
+    		pass: "fbnlyymofyoiniee"
+ 		 }
+	});
+	return transport;
 }
 
 const sendMail = async (usuario) => {

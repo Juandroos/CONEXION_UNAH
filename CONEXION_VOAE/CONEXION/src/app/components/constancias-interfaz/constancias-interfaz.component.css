@@ -10,11 +10,13 @@
  
  
  .fondo {
-     background-color: rgba(255, 166, 0, 0.174);
+    background-color: rgba(26, 178, 229, 0.5);
+    /*(255, 166, 0, 0.174);*/
  }
  
  .card {
-     background-color: rgba(255, 157, 0, 0.37);
+     background-color: rgba(241, 154, 13, 0.37);
+     /*background-color: rgba(255, 157, 0, 0.37);*/
      color: rgb(4, 76, 163);
      border-radius: 15px;
  }
@@ -40,7 +42,7 @@
  }
  
  .btnVerMas {
-     background-color: rgb(247, 169, 24);
+     background-color: rgb(228, 156, 22);
      border-radius: 20px;
      color: white;
  }
