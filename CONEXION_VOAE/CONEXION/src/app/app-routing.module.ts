@@ -18,7 +18,6 @@ import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recupera
 import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
   { path: '', component: LandingPageComponent},
   { path: 'inicio', component: LandingPageComponent},
   { path: 'lista-usuarios', component: ListaUsuariosComponent},
@@ -28,22 +27,10 @@ const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'landing-page', component:LandingPageComponent},
   { path: 'constancias-interfaz',component:ConstanciasInterfazComponent},
-  { path: '**', redirectTo:'', pathMatch: 'full'}//DEBE SER SIEMPRE LA ULTIMA
-=======
-  { path: '', component: LandingPageComponent },
-  { path: 'inicio', component: InicioComponent },
-  { path: 'lista-usuarios', component: ListaUsuariosComponent },
-  { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
-  { path: 'editar-usuario/:id', component: RegistrarUsuarioComponent },
-  { path: 'correo', component: CorreoComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'landing-page', component: LandingPageComponent },
   { path: 'recuperar-cuenta', component: RecuperarCuentaComponent },
   { path: 'cambiar-pass', component: CambiarPasswordComponent },
   // Actividades Routes
   { path: 'actividades', component: ActividadesInterfazComponent },
->>>>>>> 65a454a3e505fbafe8d24e068a5695b4b9191215
-
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
 

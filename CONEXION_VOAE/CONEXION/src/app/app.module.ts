@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,15 +36,14 @@ import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recupera
     LandingPageComponent,
     LoginComponent,
     CorreoComponent,
-<<<<<<< HEAD
     ConstanciasInterfazComponent,
-=======
     ActividadesInterfazComponent,
     CambiarPasswordComponent,
     RecuperarCuentaComponent,
->>>>>>> 65a454a3e505fbafe8d24e068a5695b4b9191215
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule, 
     ReactiveFormsModule,
@@ -55,3 +55,4 @@ import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recupera
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class yourSubModule { }
