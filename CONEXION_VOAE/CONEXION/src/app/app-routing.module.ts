@@ -7,6 +7,8 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CorreoComponent } from './components/correo/correo.component';
+import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
+
 
 //ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'correo',component:CorreoComponent},
   { path: 'login', component:LoginComponent},
   { path: 'landing-page', component:LandingPageComponent},
+  { path: 'constancias-interfaz',component:ConstanciasInterfazComponent},
   { path: '**', redirectTo:'', pathMatch: 'full'}//DEBE SER SIEMPRE LA ULTIMA
 
 ];
