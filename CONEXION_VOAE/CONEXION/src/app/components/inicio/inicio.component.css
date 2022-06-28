@@ -16,7 +16,7 @@
     color: blueviolet;
 }
 
-.bottom { position:static;  }
+.bottom{ /**position:relative; */ }
 .perfil-img{
     width: 150px;
     height: 150px;
@@ -64,9 +64,35 @@
     font-weight: bolder;
     color: #065471;
 }
+
+.div-cookies{
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+.span-multi{
+    margin: 20px;
+    text-align: start!important;
+    color: #065471;
+    font-weight: bold;
+}
 /*div de la informacion*/
 
 
 /*div de las actividades*/
+.div-busqueda{
+    background-color: #CDDDE4;
+}
 
+.input-busqueda{
+    background-color: #51889F; 
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+::placeholder {
+    color: #ffcd6a;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bolder;
+  
+  }
 /*div de las actividades*/
