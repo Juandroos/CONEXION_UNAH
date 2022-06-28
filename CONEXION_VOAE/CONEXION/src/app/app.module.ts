@@ -17,10 +17,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './components/correo/correo.component';
 import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
-
-
 import { InicioComponent } from './components/inicio/inicio.component';
-
 import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
@@ -28,6 +25,7 @@ import { Pag1Component } from './components/pag1/pag1.component';
 import { Pag2Component } from './components/pag2/pag2.component';
 import { Pag3Component } from './components/pag3/pag3.component';
 import { Pag4Component } from './components/pag4/pag4.component';
+import { Pag5Component } from './components/pag5/pag5.component';
 
 
 
@@ -48,6 +46,7 @@ import { Pag4Component } from './components/pag4/pag4.component';
     Pag2Component,
     Pag3Component,
     Pag4Component,
+    Pag5Component,
   ],
   imports: [
     FormsModule,
