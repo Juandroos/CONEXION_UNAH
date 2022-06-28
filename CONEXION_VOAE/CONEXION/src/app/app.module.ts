@@ -12,11 +12,17 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
-import { InicioComponent } from './inicio/inicio.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './components/correo/correo.component';
 import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
+
+
+import { InicioComponent } from './components/inicio/inicio.component';
+
+import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
+import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
+import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
 
 
 
@@ -29,7 +35,13 @@ import { ConstanciasInterfazComponent } from './components/constancias-interfaz/
     LandingPageComponent,
     LoginComponent,
     CorreoComponent,
+<<<<<<< HEAD
     ConstanciasInterfazComponent,
+=======
+    ActividadesInterfazComponent,
+    CambiarPasswordComponent,
+    RecuperarCuentaComponent,
+>>>>>>> 65a454a3e505fbafe8d24e068a5695b4b9191215
   ],
   imports: [
     BrowserModule,
