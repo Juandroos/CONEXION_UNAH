@@ -12,10 +12,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
-import { InicioComponent } from './inicio/inicio.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './components/correo/correo.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({

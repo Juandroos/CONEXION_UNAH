@@ -1,6 +1,51 @@
 .fondo{
-	background-image: url("../../../assets/img/inicio/810.jpg");
-	background: #1b6161;
-    background-repeat: no-repeat;
-    background-position: center;
+    
+    background-color: #a73e3e!important;
+    background-image: url("../../../assets/img/inicio/810.jpg")!important;
+    background-repeat: no-repeat, repeat;
+    color: blueviolet;
+}
+.franja-amarilla{
+    background-color: coral!important;
+    width: 20px;
+    height: 100px;
+}
+
+.perfil-img{
+    width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+    background-image: url(../../../assets/img/perfiles-temporal/perfil1.png);
+}
+.fondo-azul{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 350px;
+    margin-top: 25px;
+
+}
+
+.btn-perfil{
+    background-color: #065471;
+    color: #ffcd6a;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.div-cuerpo{
+    margin-top: 15px;
+    color: #061c24!important;
+}
+.icon-enlace{
+    margin: 5px;
+    margin-right: 15px;
+}
+.txt-enlace{
+    font-size: 1.5rem;
+    text-align: start;
+    margin-top: 15px;
 }
