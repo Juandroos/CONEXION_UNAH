@@ -15,7 +15,13 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './components/correo/correo.component';
-import { InicioComponent } from './inicio/inicio.component';
+
+import { InicioComponent } from './components/inicio/inicio.component';
+
+import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
+import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
+import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
+
 
 
 @NgModule({
@@ -27,6 +33,9 @@ import { InicioComponent } from './inicio/inicio.component';
     LandingPageComponent,
     LoginComponent,
     CorreoComponent,
+    ActividadesInterfazComponent,
+    CambiarPasswordComponent,
+    RecuperarCuentaComponent,
   ],
   imports: [
     BrowserModule,

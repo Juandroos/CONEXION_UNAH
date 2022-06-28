@@ -4,29 +4,46 @@ import { Observable } from 'rxjs';
 import { Usuario } from '../models/usuario';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsuarioService {
-  url = 'http://localhost:4000/api/usuario/'
-  constructor(private http: HttpClient) { }
+  url = 'http://localhost:4000/api/usuario/';
+  constructor(private http: HttpClient) {}
 
-  getUsuarios():Observable<any>{
+  getUsuarios(): Observable<any> {
     return this.http.get(this.url);
   }
 
-  guardarUsuario(usuario: Usuario): Observable<any>{
+  guardarUsuario(usuario: Usuario): Observable<any> {
     return this.http.post(this.url, usuario);
   }
 
-  eliminarUsuario(id:string): Observable<any>{
+  eliminarUsuario(id: string): Observable<any> {
     return this.http.delete(this.url + id);
   }
 
-  obtenerUsuario(id: string): Observable<any>{
+  obtenerUsuario(id: string): Observable<any> {
     return this.http.get(this.url + id);
   }
 
-  editarUsuario(id: string, usuario: Usuario): Observable<any>{
+  editarUsuario(id: string, usuario: Usuario): Observable<any> {
     return this.http.put(this.url + id, usuario);
+  }
+
+  // Restablecer la contrasena
+  recuperarCuenta(email: string): Observable<any> {
+    return this.http.post(this.url + 'generar-pass', { email });
+  }
+  
+  cambiarPassword(
+    id: string,
+    tempPass: string,
+    nuevaPass: string
+  ): Observable<any> {
+    return this.http.post(this.url + 'cambiar-pass', {
+      id,
+      tempPass,
+      nuevaPass,
+    });
   }
 }
