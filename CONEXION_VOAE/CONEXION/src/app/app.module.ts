@@ -16,6 +16,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorreoComponent } from './components/correo/correo.component';
+import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
+import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
+import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { CorreoComponent } from './components/correo/correo.component';
     LandingPageComponent,
     LoginComponent,
     CorreoComponent,
+    ActividadesInterfazComponent,
+    CambiarPasswordComponent,
+    RecuperarCuentaComponent,
   ],
   imports: [
     BrowserModule,
