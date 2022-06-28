@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
-const Usuario = require("../models/Usuario")
-const htmlTemplate= `
+const Usuario = require('../models/Usuario')
+const htmlTemplate = `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0"> 
  <head> 
@@ -175,6 +175,7 @@ a[x-apple-data-detectors] {
 
 `
 
+
 const createTrans = ()=>{
 	var transport = nodemailer.createTransport({
   		host: "smtp.gmail.com",
@@ -188,20 +189,21 @@ const createTrans = ()=>{
 	return transport;
 }
 
-const sendMail = async(usuario)=>{
+const sendMail = async (usuario) => {
+    const transporter = createTrans()
+    const info = await transporter.sendMail({
+        from: '"Conexion_Voae@unah.hn"',
+        to: `${usuario.correo}`,
+        subject:
+            'Hola ' +
+            `${usuario.nombre}` +
+            ', Bienvenido a la comunidad de Conexion VOAE',
+        html: htmlTemplate,
+    })
 
-	const transporter = createTrans()
-	const info = await transporter.sendMail({
-		from: '"Conexion_Voae@unah.hn"',
-		to: `${usuario.correo}`,
-		subject:"Hola " + `${usuario.nombre}`+ ", Bienvenido a la comunidad de Conexion VOAE",
-		html:htmlTemplate,
-	});
+    console.log('message sent: %s', info.messageId)
 
-	console.log("message sent: %s", info.messageId);
-
-	return
+    return
 }
-
 
 exports.sendMail = (usuario) => sendMail(usuario)
