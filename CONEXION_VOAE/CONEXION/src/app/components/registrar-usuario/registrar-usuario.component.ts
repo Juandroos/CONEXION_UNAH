@@ -74,7 +74,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       console.log(USUARIO);
     this._usuarioService.guardarUsuario(USUARIO).subscribe(data=>{
       this.toastr.success('Formaras parte de esta gran comunidad!', 'Usuario Registrado');
-      this.router.navigate(['/']);
+      this.router.navigate(['/correo']);
     }, error =>{
       console.log(error);
       this.usuarioForm.reset();
