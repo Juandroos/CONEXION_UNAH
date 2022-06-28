@@ -24,6 +24,10 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
+import { Pag1Component } from './components/pag1/pag1.component';
+import { Pag2Component } from './components/pag2/pag2.component';
+import { Pag3Component } from './components/pag3/pag3.component';
+import { Pag4Component } from './components/pag4/pag4.component';
 
 
 
@@ -40,6 +44,10 @@ import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recupera
     ActividadesInterfazComponent,
     CambiarPasswordComponent,
     RecuperarCuentaComponent,
+    Pag1Component,
+    Pag2Component,
+    Pag3Component,
+    Pag4Component,
   ],
   imports: [
     FormsModule,

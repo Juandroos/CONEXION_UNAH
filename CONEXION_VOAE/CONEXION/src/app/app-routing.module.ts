@@ -8,11 +8,10 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CorreoComponent } from './components/correo/correo.component';
 import { ConstanciasInterfazComponent } from './components/constancias-interfaz/constancias-interfaz.component';
-
-
 import { ActividadesInterfazComponent } from './components/actividades-interfaz/actividades-interfaz.component';
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
+import { Pag1Component } from './components/pag1/pag1.component';
 
 //ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -28,9 +27,10 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingPageComponent},
   { path: 'constancias-interfaz',component:ConstanciasInterfazComponent},
   { path: 'recuperar-cuenta', component: RecuperarCuentaComponent },
-  { path: 'cambiar-pass', component: CambiarPasswordComponent },
+  { path: 'cambiar-password', component: CambiarPasswordComponent },
+  { path: 'pag1', component: Pag1Component},
   // Actividades Routes
-  { path: 'actividades', component: ActividadesInterfazComponent },
+  { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
 
