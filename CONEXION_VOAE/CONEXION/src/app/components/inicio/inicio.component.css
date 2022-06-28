@@ -1,16 +1,22 @@
+.franja-amarilla{
+    background-color: #ffcd6a!important;
+    width: auto;
+    height: 10px;
+    margin: 0%;
+}
+/*div de informacion*/
 .fondo{
     
     background-color: #a73e3e!important;
-    background-image: url("../../../assets/img/inicio/810.jpg")!important;
-    background-repeat: no-repeat, repeat;
+    background: linear-gradient(rgba(196, 224, 235, 0.87),  rgba(187, 226, 233, 0.815)),  url("../../../assets/img/inicio/810.jpg")!important;
+    
+    background-repeat: no-repeat;
+    background-size: 500px auto!important;
+    background-size: 50% 50%;
     color: blueviolet;
 }
-.franja-amarilla{
-    background-color: coral!important;
-    width: 20px;
-    height: 100px;
-}
 
+.bottom { position:static;  }
 .perfil-img{
     width: 150px;
     height: 150px;
@@ -29,6 +35,7 @@
 
 }
 
+
 .btn-perfil{
     background-color: #065471;
     color: #ffcd6a;
@@ -38,7 +45,6 @@
 }
 .div-cuerpo{
     margin-top: 15px;
-    color: #061c24!important;
 }
 .icon-enlace{
     margin: 5px;
@@ -48,4 +54,19 @@
     font-size: 1.5rem;
     text-align: start;
     margin-top: 15px;
+    font-weight: bolder;
+    color: #065471;
 }
+.txt-enlace:hover{
+    font-size: 1.5rem;
+    text-align: start;
+    margin-top: 15px;
+    font-weight: bolder;
+    color: #065471;
+}
+/*div de la informacion*/
+
+
+/*div de las actividades*/
+
+/*div de las actividades*/

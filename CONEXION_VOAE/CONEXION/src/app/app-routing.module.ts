@@ -22,7 +22,7 @@ import { Pag5Component } from './components/pag5/pag5.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
-  { path: 'inicio', component: LandingPageComponent},
+  { path: 'inicio', component: InicioComponent},
   { path: 'lista-usuarios', component: ListaUsuariosComponent},
   { path: 'registrar-usuario',component: RegistrarUsuarioComponent},
   { path: 'editar-usuario/:id', component:RegistrarUsuarioComponent},
