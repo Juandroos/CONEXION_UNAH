@@ -10,7 +10,9 @@
  
  
  .fondo {
-     background-color: rgba(11, 168, 236, 0.603);
+    background: linear-gradient(rgba(124, 187, 212, 0.87) ,  rgba(89, 165, 178, 0.815)),  url("../../../assets/img/inicio/810.jpg");
+    background-size: contain;
+
  }
  
  .card {
