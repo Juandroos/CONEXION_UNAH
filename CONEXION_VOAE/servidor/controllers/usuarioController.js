@@ -3,9 +3,7 @@ const Usuario = require('../models/Usuario')
 const emailer = require('../config/emailer')
 const { generarPass } = require('../helpers/generarPassword')
 const { enviarEmail } = require('../helpers/sendEmail')
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcryptjs')
-const SECRET_KEY = 'secretkey123456'
+
 
 exports.crearUsuario = (req, res) => {
     try {
@@ -21,12 +19,12 @@ exports.crearUsuario = (req, res) => {
         console.log(error)
         res.status(500).send('Hubo un error')
         const expiresIn = 24*60*60;
-        const accessToken = jwt.sign({dni: usuario.dni},
+        const accessToken = jwt.sign({id: usuario.id},
             SECRET_KEY,{
                 expiresIn: expiresIn
             });
             //response
-            res.send({usuario})
+            res.send({ Usuario })
     };
 }
 
@@ -35,7 +33,7 @@ exports.loginUsuario = (req,res) => {
         correo: req.body.correo,
         password: req.body.password
     }
-    usuario.findOne({correo: usuarioData.correo},(err,usuario)=>{
+    Usuario.findOne({correo: usuarioData.correo},(err,usuario)=>{
       if (err) return res.status(500).send('Server error')
 
       //Email no existe
@@ -45,7 +43,7 @@ exports.loginUsuario = (req,res) => {
         const resultpassword = usuarioData.password;
         if (resultpassword){
             const expiresIn= 24 *60 * 60;
-            const accessToken= jwt.sign({dni: usuario.dni}, SECRET_KEY,{expiresIn: expiresIn});
+            const accessToken= jwt.sign({id: usuario.id}, SECRET_KEY,{expiresIn: expiresIn});
             res.send({usuarioData});
         } else {
             //contraseña equivocada

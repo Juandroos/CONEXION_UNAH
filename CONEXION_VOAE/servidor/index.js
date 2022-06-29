@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/usuario', require('./routes/usuario'));
+app.use('/api/login', require('./routes/usuario') )
 
  
 app.listen(4000, ()=>{
