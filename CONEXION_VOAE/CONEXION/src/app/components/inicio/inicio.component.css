@@ -17,7 +17,7 @@
 }
 
 .bottom{
-    position:static; }
+    position:sticky; }
 .perfil-img{
     width: 150px;
     height: 150px;
