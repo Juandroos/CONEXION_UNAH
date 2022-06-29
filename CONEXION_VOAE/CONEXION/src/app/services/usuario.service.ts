@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Usuario } from '../models/usuario';
+import { JwtResponseI } from '../models/jwt-response';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +30,8 @@ export class UsuarioService {
   editarUsuario(id: string, usuario: Usuario): Observable<any> {
     return this.http.put(this.url + id, usuario);
   }
+
+  
 
   // Restablecer la contrasena
   recuperarCuenta(email: string): Observable<any> {
