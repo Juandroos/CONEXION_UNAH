@@ -17,7 +17,7 @@
 }
 
 .bottom{
-    position:static; }
+    position:sticky; }
 .perfil-img{
     width: 150px;
     height: 150px;
@@ -126,5 +126,6 @@
     background-color: #FFCD6A;
     border-radius: 25px;
     width: 250px;
+    margin-left: 20px;
   }
 /*div de las actividades*/

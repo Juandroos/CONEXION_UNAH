@@ -19,6 +19,8 @@ import { Pag2Component } from './components/pag2/pag2.component';
 import { Pag3Component } from './components/pag3/pag3.component';
 import { Pag4Component } from './components/pag4/pag4.component';
 import { Pag5Component } from './components/pag5/pag5.component';
+import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
+import { ActividadComponent } from './components/actividad/actividad.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
@@ -32,6 +34,7 @@ const routes: Routes = [
   { path: 'constancias-interfaz',component:ConstanciasInterfazComponent},
   { path: 'recuperar-cuenta', component: RecuperarCuentaComponent },
   { path: 'cambiar-password', component: CambiarPasswordComponent },
+  { path: 'informacion-personal', component: InformacionPersonalComponent},
   { path: 'pag1', component: Pag1Component},
   { path: 'pag2', component: Pag2Component},
   { path: 'pag3', component: Pag3Component},
@@ -39,6 +42,7 @@ const routes: Routes = [
   { path: 'pag5', component: Pag5Component},
   // Actividades Routes
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
+  { path: 'actividad', component: ActividadComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
 

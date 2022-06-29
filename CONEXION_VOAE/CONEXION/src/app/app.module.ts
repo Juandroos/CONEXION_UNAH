@@ -26,6 +26,8 @@ import { Pag2Component } from './components/pag2/pag2.component';
 import { Pag3Component } from './components/pag3/pag3.component';
 import { Pag4Component } from './components/pag4/pag4.component';
 import { Pag5Component } from './components/pag5/pag5.component';
+import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
+import { ActividadComponent } from './components/actividad/actividad.component';
 
 
 
@@ -47,6 +49,8 @@ import { Pag5Component } from './components/pag5/pag5.component';
     Pag3Component,
     Pag4Component,
     Pag5Component,
+    InformacionPersonalComponent,
+    ActividadComponent,
   ],
   imports: [
     FormsModule,

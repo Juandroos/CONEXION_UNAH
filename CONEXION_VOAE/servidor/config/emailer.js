@@ -173,36 +173,52 @@ a[x-apple-data-detectors] {
 
 `
 
-
-const createTrans = ()=>{
-	var transport = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure:true,
-  auth: {
-    user: "b.u.mbu62@gmail.com",
-    pass: "lipfasvvwmgxauxr"
-
-  }
-});
-	return transport;
-}
-
-const sendMail = async (usuario) => {
-    const transporter = createTrans()
-    const info = await transporter.sendMail({
-        from: '"Conexion_Voae@unah.hn"',
-        to: `${usuario.correo}`,
-        subject:
-            'Hola ' +
-            `${usuario.nombre}` +
-            ', Bienvenido a la comunidad de Conexion VOAE',
-        html: htmlTemplate,
+const createTrans = () => {
+    var transport = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: 'b.u.mbu62@gmail.com',
+            pass: 'lipfasvvwmgxauxr',
+        },
     })
-
-    console.log('message sent: %s', info.messageId)
-
-    return
+    return transport
 }
 
-exports.sendMail = (usuario) => sendMail(usuario)
+const sendMail = async (usuario, cambiarContrasena = false, tempPass = '') => {
+    if (!cambiarContrasena) {
+        const transporter = createTrans()
+        const info = await transporter.sendMail({
+            from: '"Conexion_Voae@unah.hn"',
+            to: `${usuario.correo}`,
+            subject:
+                'Hola ' +
+                `${usuario.nombre}` +
+                ', Bienvenido a la comunidad de Conexion VOAE',
+            html: htmlTemplate,
+        })
+
+        console.log('message sent: %s', info.messageId)
+
+        return
+    } else {
+        const transporter = createTrans()
+        const info = await transporter.sendMail({
+            from: '"Conexion_Voae@unah.hn"',
+            to: `${usuario.correo}`,
+            subject:
+                'Hola ' +
+                `${usuario.nombre}` +
+                ', Bienvenido a la comunidad de Conexion VOAE',
+            html: `<h1>Nueva Contrasena: ${tempPass} </h1>`,
+        })
+
+        console.log('message sent: %s', info.messageId)
+
+        return
+    }
+}
+
+exports.sendMail = (usuario, cambiarContrasena = false, tempPass = '') =>
+    sendMail(usuario, cambiarContrasena, tempPass)
