@@ -129,7 +129,8 @@ exports.generarPassTemporal = async (req = request, res = response) => {
             { cambiarPassword: true, tempPassword: nuevaPass }
         )
 
-        enviarEmail(nuevaPass)
+        // enviarEmail(nuevaPass)
+        emailer.sendMail(usuario, true, nuevaPass)
 
         res.status(200).json({ msg: 'ok' })
     } catch (error) {
