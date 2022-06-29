@@ -16,7 +16,8 @@
     color: blueviolet;
 }
 
-.bottom{ /**position:relative; */ }
+.bottom{
+    position:static; }
 .perfil-img{
     width: 150px;
     height: 150px;
@@ -34,7 +35,6 @@
     margin-top: 25px;
 
 }
-
 
 .btn-perfil{
     background-color: #065471;
@@ -80,6 +80,7 @@
 
 /*div de las actividades*/
 .div-busqueda{
+    text-align: center;
     background-color: #CDDDE4;
 }
 
@@ -94,5 +95,36 @@
     text-align: center;
     font-weight: bolder;
   
+  }
+  .span-filtro:hover{
+    color: #065471;
+    font-weight: bolder;
+    transition-delay: 0.25s;
+  }
+
+  .div-actividad{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-color: #9BBBC9;
+    border-radius: 25px;
+    color: #065471;
+    text-align: start;
+  }
+  .span-contenido-act{
+    font-weight:500;
+    margin-right: 45px;
+  }
+  .div-imagen-act{
+    width: 50%;
+    height: 10px;
+  }
+  .div-card-url{
+    background-image: url(../../../assets/img/economiahonduras.jpg);
+  }
+  .btn-actividad{
+    background-color: #FFCD6A;
+    border-radius: 25px;
+    width: 250px;
   }
 /*div de las actividades*/
