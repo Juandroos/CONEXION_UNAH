@@ -1,0 +1,58 @@
+.fondo-principal{
+    
+    background-color: #a73e3e!important;
+    background: linear-gradient(rgba(234, 238, 240, 0.87),  rgba(241, 249, 250, 0.815)),  url("../../../assets/img/informacion-perfil/pexels.jpeg")!important;
+    
+    background-repeat: no-repeat;
+    background-size: 1500px auto!important;
+    background-size: 50% 50%;
+    color: blueviolet;
+}
+
+/* div parte 1  */
+.div-foto{
+    margin-bottom: 10px;
+    background-color: rgba(45, 103, 117, 0.61);
+    position: sticky;
+}
+.perfil-img{
+    width: 200px;
+    height: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+    background-image: url(../../../assets/img/perfiles-temporal/perfil1.png);
+}
+.logo-settings{
+    width: 220px;
+}
+.btn-perfil{
+    background-color: #065471;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 100px;
+    margin-top: 25px;
+    margin-bottom: 150px;
+}
+.icono-camara{
+    font-size: 3.0rem;
+    color: #ffd000;
+    margin: 15px;
+}
+
+.div-cookies{
+    margin-bottom: 20px;
+}
+.span-multi{
+    margin: 20px;
+    text-align: start!important;
+    color: #065471;
+    font-weight: bold;
+}
+
+/* div parte 2  */
+.div-info{
+    margin-top: 1px;
+}
