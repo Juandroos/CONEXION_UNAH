@@ -1,6 +1,6 @@
 img {
 
-	width: 1519px;
+	width: 1349px;
 	height: 600px;
 }
 
@@ -12,17 +12,17 @@ img {
     border-color: #ffcd6a;
     position: absolute;
     left: 42%;
-    top: 522px;
-    width: 254px;
+    top: 460px;
+    width: 236px;
     height: 60px;
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
 }
 
 #logo_correo img{
     position: absolute;
-    width: 534px;
-    height: 477px;
+    width: 490px;
+    height: 400px;
     top: 2px;
     left: 33%;
 
