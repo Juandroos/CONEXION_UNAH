@@ -65,5 +65,7 @@ import { ActividadComponent } from './components/actividad/actividad.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
 export class yourSubModule { }

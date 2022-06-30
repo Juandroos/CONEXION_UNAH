@@ -26,7 +26,8 @@
                             <td>{{usuario.cuenta}}</td>
                             <td scope="col">
                                 <i (click)="eliminarUsuario(usuario._id)" class="fa-solid fa-trash-can text-danger"></i>
-                                <i [routerLink]="['/editar-usuario', usuario._id]" class="fa-solid fa-user-pen text-primary"></i></td>
+                                <i [routerLink]="['/editar-usuario', usuario._id]" class="fa-solid fa-user-pen text-primary"></i>
+                                <i [routerLink]="['/inicio', usuario._id]" class="fa-solid fa-user-pen text-primary"></i></td>
                           </tr>
                           
                         </tbody>
