@@ -179,8 +179,8 @@ const createTrans = () => {
         port: 465,
         secure: true,
         auth: {
-            user: 'b.u.mbu62@gmail.com',
-            pass: 'lipfasvvwmgxauxr',
+            user: 'josuezelaya991@gmail.com',
+            pass: 'xblvlyuaubledcne',
         },
     })
     return transport
