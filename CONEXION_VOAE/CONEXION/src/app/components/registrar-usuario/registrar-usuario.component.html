@@ -129,7 +129,7 @@
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Constraseña</label>
-            <input type="password" class="form-control" id="password" formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&-]{8,10}$"placeholder="Mayor de 8 caracteres)">
+            <input type="password" class="form-control" id="password" formControlName="password" >
             <span class="fst-italic text-primary" style="font-size: 1.0rem;">Mayusculas, minuscula, un digito y 1 caracter especial @*!</span>
             <div class="text-danger"
             *ngIf="usuarioForm.controls['password'].hasError('required') && usuarioForm.controls['password'].touched">

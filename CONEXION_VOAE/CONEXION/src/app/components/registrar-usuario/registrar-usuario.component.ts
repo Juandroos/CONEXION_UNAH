@@ -34,7 +34,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       cuenta: ['',[Validators.required, Validators.pattern('((20)[0-9]{2}[1|2|3]{1}[0-9]{6})|[0-9]{6}')]],
       rol:['', Validators.required],
       correo: ['',  [Validators.required, Validators.pattern('[A-z]{5,}@(unah\.)(edu\.hn|hn)$')]],
-      password: ['', [Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&-]{8,10}$')]]
+      password: ['', [Validators.required]]
       
   }) 
   this.id = this.aRouter.snapshot.paramMap.get('id');
