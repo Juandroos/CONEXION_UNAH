@@ -7,6 +7,12 @@
     margin-left: 7px ;
     font-size: 0.9rem;
 } 
+.text-warning{
+    color: rgb(136, 136, 7);
+    text-align: start;
+    margin-left: 7px ;
+    font-size: 0.9rem;
+} 
 
 .media1{
     margin: 0px;
@@ -31,7 +37,7 @@
 }
 .msg-peq{
     font-size: 0.5px;
-    color: darkgrey;
+    color: rgb(119, 115, 115);
 }
 .img-log{
     width: 200px;
@@ -40,3 +46,18 @@
     display:block;
 margin:auto;
 }
+
+.mayuscula-input{
+    text-transform:uppercase;
+}
+.minuscula-input{
+    text-transform: lowercase;
+}
+/*Eliminar la flecha*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
