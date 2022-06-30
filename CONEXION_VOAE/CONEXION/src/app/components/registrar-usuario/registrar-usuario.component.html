@@ -15,7 +15,7 @@
                     <span>El numero de identidad <strong>es obligatorio.</strong></span>
                 </div>
                 <div class="text-warning"
-                 *ngIf="usuarioForm.controls['dni'].hasError('pattern')">
+                 *ngIf="usuarioForm.controls['dni'].hasError('pattern') && usuarioForm.controls['dni'].touched">
                 <span>El numero de identidad <strong>no es correcto.</strong></span>
               </div>
             </div>
@@ -52,7 +52,7 @@
                 <span>El telefono <strong>es obligatorio.</strong></span>
             </div>
             <div class="text-warning"
-               *ngIf="usuarioForm.controls['telefono'].hasError('pattern')">
+               *ngIf="usuarioForm.controls['telefono'].hasError('pattern') && usuarioForm.controls['telefono'].touched">
                 <span>El numero telefonico<strong>no es valido. Ejemplo: 32000000</strong></span>
             </div>
           </div>
