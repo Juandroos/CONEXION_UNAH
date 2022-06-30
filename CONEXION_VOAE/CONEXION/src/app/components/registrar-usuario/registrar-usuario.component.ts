@@ -24,7 +24,7 @@ export class RegistrarUsuarioComponent implements OnInit {
     private aRouter: ActivatedRoute
     ) {
     this.usuarioForm = this.fb.group({
-      dni:['', [Validators.required, Validators.pattern('(0|1)[0-9]{3}((19[2-9]{2})|(20[0|1])\d{1})[0-9]{5}')]],
+      dni:['', [Validators.required, Validators.pattern('(0|1)[0-9]{3}((19[0-9]{2})|(20[0-9]{2})\d{1})[0-9]{5}')]],
       nombre: ['', [Validators.required, Validators.pattern(this.patronName)]],
       apellido: ['', [Validators.required, Validators.pattern(this.patronName)]],
       telefono: ['', [Validators.required, Validators.pattern('^[2,3,8,9]{1}[0-9]{7}')]],
