@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./cambiar-password.component.css'],
 })
 export class CambiarPasswordComponent implements OnInit {
-  
   idUsuario = '62a8e8901d025fb72b51db08';
 
   changePass = this.fb.group({
@@ -34,8 +33,11 @@ export class CambiarPasswordComponent implements OnInit {
       return;
     }
 
+    const _id: string = localStorage.getItem('id')!;
+    console.log('viendo el id', localStorage.getItem('id'));
+
     this.usuarioSrv
-      .cambiarPassword(this.idUsuario, tempPass!, nuevaPass!)
+      .cambiarPassword(_id, tempPass!, nuevaPass!)
       .subscribe((resp) => {
         console.log(resp);
       });

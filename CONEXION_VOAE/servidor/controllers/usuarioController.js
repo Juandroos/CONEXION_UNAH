@@ -4,7 +4,6 @@ const emailer = require('../config/emailer')
 const { generarPass } = require('../helpers/generarPassword')
 const { enviarEmail } = require('../helpers/sendEmail')
 
-
 exports.crearUsuario = (req, res) => {
     try {
         let usuario
@@ -18,38 +17,39 @@ exports.crearUsuario = (req, res) => {
     } catch (error) {
         console.log(error)
         res.status(500).send('Hubo un error')
-        const expiresIn = 24*60*60;
-        const accessToken = jwt.sign({id: usuario.id},
-            SECRET_KEY,{
-                expiresIn: expiresIn
-            });
-            //response
-            res.send({ Usuario })
-    };
+        const expiresIn = 24 * 60 * 60
+        const accessToken = jwt.sign({ id: usuario.id }, SECRET_KEY, {
+            expiresIn: expiresIn,
+        })
+        //response
+        res.send({ Usuario })
+    }
 }
 
-exports.loginUsuario = (req,res) => {
+exports.loginUsuario = (req, res) => {
     const usuarioData = {
         correo: req.body.correo,
-        password: req.body.password
+        password: req.body.password,
     }
-    Usuario.findOne({correo: usuarioData.correo},(err,usuario)=>{
-      if (err) return res.status(500).send('Server error')
+    Usuario.findOne({ correo: usuarioData.correo }, (err, usuario) => {
+        if (err) return res.status(500).send('Server error')
 
-      //Email no existe
-      if (!usuario){
-        res.status(409).send({message: 'Hay un error'})
-      }  else{
-        const resultpassword = usuarioData.password;
-        if (resultpassword){
-            const expiresIn= 24 *60 * 60;
-            const accessToken= jwt.sign({id: usuario.id}, SECRET_KEY,{expiresIn: expiresIn});
-            res.send({usuarioData});
+        //Email no existe
+        if (!usuario) {
+            res.status(409).send({ message: 'Hay un error' })
         } else {
-            //contraseña equivocada
-            res.status(409).send({message: 'Hay un error'})
+            const resultpassword = usuarioData.password
+            if (resultpassword) {
+                const expiresIn = 24 * 60 * 60
+                const accessToken = jwt.sign({ id: usuario.id }, SECRET_KEY, {
+                    expiresIn: expiresIn,
+                })
+                res.send({ usuarioData })
+            } else {
+                //contraseña equivocada
+                res.status(409).send({ message: 'Hay un error' })
+            }
         }
-      }
     })
 }
 
@@ -129,6 +129,30 @@ exports.obtenerUsuario = async (req, res) => {
     }
 }
 
+exports.obtenerUsuarioCorreo = async (req = request, res = response) => {
+    try {
+        const { email, password } = req.body
+        const usuario = await Usuario.findOne({ correo: email }).exec()
+
+        if (!usuario) {
+            res.status(404).json({ msg: 'Usuario no existe' })
+            return
+        }
+
+        const { tempPassword } = usuario
+
+        if (tempPassword != password) {
+            res.status(404).json({ msg: 'Contrasena incorrecta' })
+            return
+        }
+
+        res.status(200).send(usuario)
+    } catch (error) {
+        res.status(500).send('Hubo un error')
+        console.log(error)
+    }
+}
+
 exports.eliminarUsuarios = async (req, res) => {
     try {
         let usuario = await Usuario.findById(req.params.id)
@@ -175,7 +199,10 @@ exports.generarPassTemporal = async (req = request, res = response) => {
 exports.cambiarPass = async (req = request, res = response) => {
     try {
         const { tempPass, nuevaPass, id } = req.body
-        const usuario = await Usuario.findOne({ _id: id }).exec()
+        console.log('viendo el id', id)
+        const usuario = await Usuario.findById(id).exec()
+
+        console.log('viendo el usuario', usuario)
 
         if (!usuario) {
             res.status(404).json({ msg: 'No se encontro usuario' })

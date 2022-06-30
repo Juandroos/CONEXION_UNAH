@@ -27,17 +27,19 @@ export class UsuarioService {
     return this.http.get(this.url + id);
   }
 
+  obtenerUsuarioCorreo(email: string, password: string): Observable<any> {
+    return this.http.post(this.url + 'usuario-correo', { email, password });
+  }
+
   editarUsuario(id: string, usuario: Usuario): Observable<any> {
     return this.http.put(this.url + id, usuario);
   }
-
-  
 
   // Restablecer la contrasena
   recuperarCuenta(email: string): Observable<any> {
     return this.http.post(this.url + 'generar-pass', { email });
   }
-  
+
   cambiarPassword(
     id: string,
     tempPass: string,
