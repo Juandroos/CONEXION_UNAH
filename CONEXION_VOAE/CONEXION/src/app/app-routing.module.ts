@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+//prueba
 //components
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
