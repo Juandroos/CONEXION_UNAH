@@ -23,7 +23,8 @@ import { InformacionPersonalComponent } from './components/informacion-personal/
 import { ActividadComponent } from './components/actividad/actividad.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent},
+  { path: '', redirectTo: '/landing', pathMatch: 'full'},
+  { path: 'landing', component: LandingPageComponent},
   { path: 'inicio', component: InicioComponent},
   { path: 'lista-usuarios', component: ListaUsuariosComponent},
   { path: 'registrar-usuario',component: RegistrarUsuarioComponent},

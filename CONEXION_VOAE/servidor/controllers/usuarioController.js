@@ -1,10 +1,40 @@
-const { json, request, response } = require('express')
-const Usuario = require('../models/Usuario')
-const emailer = require('../config/emailer')
-const { generarPass } = require('../helpers/generarPassword')
-const { enviarEmail } = require('../helpers/sendEmail')
+'use strict'
+const { json, request, response } = require('express');
+const bcrypt = require('bcrypt');
+const jwt = require('../helpers/generarPassword');
+const Usuario = require('../models/Usuario');
+const emailer = require('../config/emailer');
+const { generarPass } = require('../helpers/generarPassword');
+const { enviarEmail } = require('../helpers/sendEmail');
 
-exports.crearUsuario = (req, res) => {
+const login_usuario = async function (req,res){
+    var data= req.body;
+    var arr=[];
+    arr = await Usuario.find({correo: data.correo});
+    if(arr.length==0){
+        res.status(200).send({message: 'Este correo no está registrado', data: undefined});
+    }else{
+        let user = arr[0];
+        bcrypt.compare(data.password, user.password, async function(error, check){
+            if(data.password==user.password){
+                res.status(200).send({
+                    data: user.nombre,
+                    id: user._id,
+                    nombre: user.nombre,
+                    cuenta: user.cuenta,
+                    correo: user.correo,
+                    token: jwt.createToken(user)
+                });
+            }else{
+                res.status(200).send({
+                    message: 'La contraseña es incorrecta'
+                });
+            }
+        })
+    }
+}
+
+const crearUsuario = (req, res) => {
     try {
         let usuario
 
@@ -26,34 +56,7 @@ exports.crearUsuario = (req, res) => {
     }
 }
 
-exports.loginUsuario = (req, res) => {
-    const usuarioData = {
-        correo: req.body.correo,
-        password: req.body.password,
-    }
-    Usuario.findOne({ correo: usuarioData.correo }, (err, usuario) => {
-        if (err) return res.status(500).send('Server error')
-
-        //Email no existe
-        if (!usuario) {
-            res.status(409).send({ message: 'Hay un error' })
-        } else {
-            const resultpassword = usuarioData.password
-            if (resultpassword) {
-                const expiresIn = 24 * 60 * 60
-                const accessToken = jwt.sign({ id: usuario.id }, SECRET_KEY, {
-                    expiresIn: expiresIn,
-                })
-                res.send({ usuarioData })
-            } else {
-                //contraseña equivocada
-                res.status(409).send({ message: 'Hay un error' })
-            }
-        }
-    })
-}
-
-exports.obtenerUsuarios = async (req, res) => {
+const obtenerUsuarios = async (req, res) => {
     try {
         const usuarios = await Usuario.find()
         res.json(usuarios)
@@ -63,7 +66,7 @@ exports.obtenerUsuarios = async (req, res) => {
     }
 }
 
-exports.actualizarUsuarios = async (req, res) => {
+const actualizarUsuarios = async (req, res) => {
     try {
         const {
             dni,
@@ -115,7 +118,7 @@ exports.actualizarUsuarios = async (req, res) => {
     }
 }
 
-exports.obtenerUsuario = async (req, res) => {
+const obtenerUsuario = async (req, res) => {
     try {
         let usuario = await Usuario.findById(req.params.id)
 
@@ -129,7 +132,7 @@ exports.obtenerUsuario = async (req, res) => {
     }
 }
 
-exports.obtenerUsuarioCorreo = async (req = request, res = response) => {
+const obtenerUsuarioCorreo = async (req = request, res = response) => {
     try {
         const { email, password } = req.body
         const usuario = await Usuario.findOne({ correo: email }).exec()
@@ -153,7 +156,7 @@ exports.obtenerUsuarioCorreo = async (req = request, res = response) => {
     }
 }
 
-exports.eliminarUsuarios = async (req, res) => {
+const eliminarUsuarios = async (req, res) => {
     try {
         let usuario = await Usuario.findById(req.params.id)
 
@@ -168,7 +171,7 @@ exports.eliminarUsuarios = async (req, res) => {
     }
 }
 
-exports.generarPassTemporal = async (req = request, res = response) => {
+const generarPassTemporal = async (req = request, res = response) => {
     try {
         const { email } = req.body
         console.log(email)
@@ -196,7 +199,7 @@ exports.generarPassTemporal = async (req = request, res = response) => {
     }
 }
 
-exports.cambiarPass = async (req = request, res = response) => {
+const cambiarPass = async (req = request, res = response) => {
     try {
         const { tempPass, nuevaPass, id } = req.body
         console.log('viendo el id', id)
@@ -230,4 +233,16 @@ exports.cambiarPass = async (req = request, res = response) => {
         console.log(error)
         res.status(500).send('Hubo un error')
     }
+}
+
+module.exports={
+    login_usuario,
+    obtenerUsuarios,
+    crearUsuario,
+    actualizarUsuarios,
+    obtenerUsuario,
+    obtenerUsuarioCorreo,
+    eliminarUsuarios,
+    generarPassTemporal,
+    cambiarPass
 }
