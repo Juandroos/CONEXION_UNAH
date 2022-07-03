@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
+
 export class InicioComponent implements OnInit {
 
   constructor(private router: Router) { 
@@ -18,5 +19,4 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/login']);
     }
   }
-
 }
