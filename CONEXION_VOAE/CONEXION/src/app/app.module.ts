@@ -1,7 +1,7 @@
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -54,6 +54,7 @@ import { ActividadComponent } from './components/actividad/actividad.component';
   ],
   imports: [
     FormsModule,
+    NgImageSliderModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule, 
