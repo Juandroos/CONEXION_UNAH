@@ -85,6 +85,31 @@ body *{
 
 }
 
+.mision {
+	padding: 30x;
+	width: 290px;
+	height: 200px;
+	position: absolute;
+	left: 25%;
+	top: 60%;
+	display: block;
+	background: rgba(255,255,255,.2);
+	border-radius: 5px;
+	letter-spacing: 2px;
+	}
+
+.mision h2{
+	text-align: center;
+	font-size: 35px;
+
+}
+.mision p{
+	text-align: justify;
+	margin: 10px;
+	font-size: 16px;
+
+
+}
 
 /* pie de pagina*/
 
