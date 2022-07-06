@@ -21,6 +21,7 @@ import { Pag4Component } from './components/pag4/pag4.component';
 import { Pag5Component } from './components/pag5/pag5.component';
 import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
 import { ActividadComponent } from './components/actividad/actividad.component';
+import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-nueva.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full'},
@@ -44,6 +45,7 @@ const routes: Routes = [
   // Actividades Routes
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: 'actividad', component: ActividadComponent },
+  { path: 'actividad-nueva', component: ActividadNuevaComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
 
