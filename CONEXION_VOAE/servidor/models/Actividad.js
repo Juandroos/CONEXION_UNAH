@@ -1,3 +1,10 @@
-const { Schema } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
-const ActividadSchema = Schema({})
+const ActividadSchema = Schema({
+    nombre: {
+        type: String,
+        required: true
+    }
+})
+
+module.exports = model('Actividades', ActividadSchema)

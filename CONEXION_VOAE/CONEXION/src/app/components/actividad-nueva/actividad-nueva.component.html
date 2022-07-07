@@ -1,38 +1,52 @@
-
-
 <div class="container">
-    <div>
-        <h1>Crear nueva actividad</h1>
+    <div class="text-center mt-4">
+        <h4>CREAR ACTIVIDAD</h4>
     </div>
     <div class="form-actividad">
+        <p><b> Ingrese la siguiente informacion:</b></p>
         <form>
-            <div class="mb-3 input-size">
+            <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Ingrese el nombre de la actividad">
             </div>
-            <div class="mb-3 input-size">
-                <input type="text" class="form-control" placeholder="Area del conocimiento">
+            <select class="form-select mb-3" aria-label="Default select example">
+                <option selected>Area del Conocimiento</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Comments</label>
             </div>
-            <div class="mb-3 input-size">
-                <textarea class="form-control" placeholder="Ingrese una breve descripcion de la actividad"
-                    id="floatingTextarea2" style="height: 100px"></textarea>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Ingrese el nombre de la actividad">
             </div>
-            <div class="mb-3 input-size">
-                <input type="text" class="form-control" placeholder="Fecha y hora">
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Ingrese el nombre de la actividad">
             </div>
-            <div class="mb-3 input-size">
-                <input type="text" class="form-control" placeholder="Constancia validada por">
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Ingrese el nombre de la actividad">
             </div>
-            <div class="mb-3 input-size">
-                <input type="text" class="form-control" placeholder="Encargados">
+
+            <div class="mb-3">
+                <input type="file" class="form-control" placeholder="Ingrese el nombre de la actividad">
             </div>
-            <div class="mb-3 input-size">
-                <input type="text" class="form-control" placeholder="subir imagen">
-            </div>
+
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <label class="form-check-label" for="exampleCheck1">Acepto los terminos y que la informacion brindada es
+                    real.</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="d-flex justify-content-evenly">
+                <button type="button" class="btn btn-success mr-4">Guardar</button>
+                <button type="button" class="btn btn-danger">Descartar</button>
+
+            </div>
         </form>
     </div>
 

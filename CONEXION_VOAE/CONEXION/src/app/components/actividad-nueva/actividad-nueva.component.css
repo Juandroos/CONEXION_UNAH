@@ -1,20 +1,33 @@
 .form-actividad {
-    /* background-color: aliceblue; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin: 50px; */
-    /* padding: 0; */
-    width: 80%;
-  }
-  .form-control {
-    border-radius: 10px;
-    text-align: center;
-    border: 0.5px solid #000;
-    width: 200%;
-    height: ;
-  }
-  
-  input::placeholder {
-    text-align: center;
-  }
+  background-color: #f4d69eb9;
+  min-height: 100px;
+  margin: 20px 300px 20px 300px;
+  border-radius: 20px;
+  padding: 20px 50px 50px 50px;
+}
+.form-control {
+  border-radius: 12px;
+  text-align: center;
+  border: 0.4px solid #000;
+}
+
+.form-control input::placeholder {
+  text-align: center;
+  color: #50879F;
+}
+
+.form-select {
+  border-radius: 12px;
+  text-align: center;
+  border: 0.4px solid #000;
+}
+
+.form-select input::placeholder {
+  text-align: center;
+  color: #50879F;
+}
+
+button {
+  width: 40%;
+  border-radius: 20px;
+}

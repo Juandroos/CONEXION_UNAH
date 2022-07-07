@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { ActividadService } from '../../services/actividad.service';
 
 @Component({
   selector: 'app-actividad-nueva',
   templateUrl: './actividad-nueva.component.html',
-  styleUrls: ['./actividad-nueva.component.css']
+  styleUrls: ['./actividad-nueva.component.css'],
 })
-export class ActividadNuevaComponent implements OnInit {
+export class ActividadNuevaComponent {
+  constructor(private fb: FormBuilder, actividadSrv: ActividadService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  form = this.fb.group({
+    nombre: [],
+    area: [],
+    descripcion: [],
+    fecha: [],
+    encargados: [],
+    imagen: [],
+  });
 }
