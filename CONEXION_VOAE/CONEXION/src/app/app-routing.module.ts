@@ -44,10 +44,11 @@ const routes: Routes = [
   { path: 'pag3', component: Pag3Component},
   { path: 'pag4', component: Pag4Component},
   { path: 'pag5', component: Pag5Component},
-  { path: 'inicio-voae', component: InicioVoaeComponent},
+ 
   // Actividades Routes
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: 'actividad', component: ActividadComponent },
+   { path: 'inicio-voae', component: InicioVoaeComponent},
   { path: 'actividad-nueva', component: ActividadNuevaComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
