@@ -37,6 +37,12 @@ export class LandingPageComponent implements OnInit {
         thumbImage: '../assets/img/landin/mental.png',
         title: 'Salud mental',
         alt: ''
+      },
+      {
+        image: '../assets/img/landin/mental.png',
+        thumbImage: '../assets/img/landin/mental.png',
+        title: 'Salud mental',
+        alt: ''
       }
   ];
 }

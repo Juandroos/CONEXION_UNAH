@@ -28,7 +28,9 @@ import { Pag4Component } from './components/pag4/pag4.component';
 import { Pag5Component } from './components/pag5/pag5.component';
 import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
 import { ActividadComponent } from './components/actividad/actividad.component';
+
 import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-nueva.component';
+
 import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.component';
 
 
@@ -53,7 +55,9 @@ import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.compon
     Pag5Component,
     InformacionPersonalComponent,
     ActividadComponent,
+
     ActividadNuevaComponent,
+
     InicioVoaeComponent,
   ],
   imports: [

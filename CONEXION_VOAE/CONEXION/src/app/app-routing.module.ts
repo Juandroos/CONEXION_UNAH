@@ -12,6 +12,7 @@ import { ActividadesInterfazComponent } from './components/actividades-interfaz/
 import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-password.component';
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
 import { Pag1Component } from './components/pag1/pag1.component';
+import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.component';
 
 //ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -22,7 +23,7 @@ import { Pag5Component } from './components/pag5/pag5.component';
 import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
 import { ActividadComponent } from './components/actividad/actividad.component';
 import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-nueva.component';
-import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full'},
@@ -43,11 +44,12 @@ const routes: Routes = [
   { path: 'pag3', component: Pag3Component},
   { path: 'pag4', component: Pag4Component},
   { path: 'pag5', component: Pag5Component},
+  { path: 'inicio-voae', component: InicioVoaeComponent},
   // Actividades Routes
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: 'actividad', component: ActividadComponent },
   { path: 'actividad-nueva', component: ActividadNuevaComponent },
-  { path: 'inicio-voae', component: InicioVoaeComponent},
+
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
 

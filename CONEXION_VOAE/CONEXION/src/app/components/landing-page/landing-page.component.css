@@ -2,7 +2,7 @@
 	padding: 3px 10%;
 	width: 100%;
 	border-radius: 0px;
-	background: #dee2e6;
+	background: black;
 }
 
 
@@ -38,50 +38,65 @@ body{
 	background: rgb(240,240,240);
 }
 .principal{
-	padding: 1px 10%;
-	background:#dee2e6;
+	padding: 1px;
+	background:black;
 }
+
 #content{
+
 	min-height: 400px;
+
 	width: 100%;
 	margin: 0px auto;
-	box-shadow: 0px 0px 40px gray;
-	background-image: rgba(255,255,255,0.7);
+
+	background-image: rgba(255,255,255,1);
 	
 }
 
 .img-responsive{
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100%;
+
+	padding: 0px 5%;
+	width:100%;
 	height: 570px;
 
 }
+
 
 body *{
 	margin: 0px;
 }
 
 #content button {
-	left: 65%;
+	left: 75%;
 	position: absolute;
-	width: 180px;
-    height: 43px;
-    background: #065471;
-    border-color: #065471;
+	background-color: #4CAF50; 
+	width: 177px;
+    border: none;
     color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
     border-radius: 10px;
 
 
 }
 
 
-.ini_sesion .iniciar {
+
+
+.iniciar{
     top: 50%;
+    
 }
 
-.registrar .registrate {   
-    top: 65%;
+.registrate {   
+    top: 60%;
+    
 
 }
 
@@ -90,10 +105,10 @@ body *{
 	width: 290px;
 	height: 200px;
 	position: absolute;
-	left: 25%;
-	top: 60%;
+	left: 18%;
+	top: 52%;
 	display: block;
-	background: rgba(255,255,255,.2);
+	background: rgba(255,255,255,.8);
 	border-radius: 5px;
 	letter-spacing: 2px;
 	}
@@ -108,6 +123,32 @@ body *{
 	margin: 10px;
 	font-size: 16px;
 
+}
+
+
+.vision {
+	padding: 30x;
+	width: 290px;
+	height: 200px;
+	position: absolute;
+	left: 52%;
+	top: 90%;
+	display: block;
+	background: rgba(255,255,255,.85);
+	border-radius: 5px;
+	letter-spacing: 2px;
+	}
+
+.vision h2{
+	text-align: center;
+	font-size: 35px;
+
+}
+
+.vision p{
+	text-align: justify;
+	margin: 10px;
+	font-size: 16px;
 
 }
 
