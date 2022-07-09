@@ -3,8 +3,8 @@ const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 const path = require('path');
+const multer = require('multer'); // Maneja archivos en el servidor
 
 //Creamos el servidor
 const app = express();
@@ -24,14 +24,16 @@ app.use((req, res, next)=>{
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json({limit: '50mb', extended:true}))
 
+// Guardar temporalmente la imagen
 const storage = multer.diskStorage({
-    destination: path.join(__dirname, '../../public/uploads'),
+    destination: path.join(__dirname, '/public/uploads'),
     filename: (req, file, cb) => {
         const date = new Date();
         cb(null, date.getTime() + path.extname(file.originalname) );
     }
 });
 
+// Utilizando el middleware de multer
 app.use(multer({storage}).single('image'));
 
 app.use('/api', require('./routes/usuario'));
