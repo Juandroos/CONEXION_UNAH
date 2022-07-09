@@ -1,7 +1,7 @@
 .form-actividad {
   background-color: #f4d69eb9;
   min-height: 100px;
-  margin: 20px 300px 20px 300px;
+  /* margin: 20px 380px 20px 380px; */
   border-radius: 20px;
   padding: 20px 50px 50px 50px;
 }
@@ -13,7 +13,7 @@
 
 .form-control input::placeholder {
   text-align: center;
-  color: #50879F;
+  color: #50879f;
 }
 
 .form-select {
@@ -24,7 +24,14 @@
 
 .form-select input::placeholder {
   text-align: center;
-  color: #50879F;
+  color: #50879f;
+}
+
+.form-text-area {
+  border-radius: 12px;
+  text-align: center;
+  border: 0.4px solid #000;
+  /* width: 415px; */
 }
 
 button {

@@ -1,8 +1,12 @@
 const { Router } = require('express')
-const { nuevaActividad } = require('../controllers/actividadController')
+const {
+    nuevaActividad,
+    subirImagen,
+} = require('../controllers/actividadController')
 
 const actividadRouter = Router()
 
 actividadRouter.post('/', nuevaActividad)
+actividadRouter.post('/imagen', subirImagen)
 
 module.exports = actividadRouter
