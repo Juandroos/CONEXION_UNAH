@@ -38,6 +38,7 @@ app.use(multer({storage}).single('image'));
 
 app.use('/api', require('./routes/usuario'));
 app.use('/api/actividad', require('./routes/actividad'));
+app.use('/api/constancia', require('./routes/constancia'));
 
  
 app.listen(4000, ()=>{

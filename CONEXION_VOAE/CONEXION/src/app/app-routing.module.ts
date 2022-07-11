@@ -13,6 +13,7 @@ import { CambiarPasswordComponent } from './components/cambiar-password/cambiar-
 import { RecuperarCuentaComponent } from './components/recuperar-cuenta/recuperar-cuenta.component';
 import { Pag1Component } from './components/pag1/pag1.component';
 import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.component';
+import { EditarConstanciaComponent } from './components/editar-constancia/editar-constancia.component';
 
 //ESTA RUTE DEBE SEGUIR EL FORMATO DE LAS DEMAS! GI
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -23,6 +24,8 @@ import { Pag5Component } from './components/pag5/pag5.component';
 import { InformacionPersonalComponent } from './components/informacion-personal/informacion-personal.component';
 import { ActividadComponent } from './components/actividad/actividad.component';
 import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-nueva.component';
+
+
 
 
 const routes: Routes = [
@@ -48,8 +51,9 @@ const routes: Routes = [
   // Actividades Routes
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: 'actividad', component: ActividadComponent },
-   { path: 'inicio-voae', component: InicioVoaeComponent},
+  { path: 'inicio-voae', component: InicioVoaeComponent},
   { path: 'actividad-nueva', component: ActividadNuevaComponent },
+  { path: 'editar-constancia', component: EditarConstanciaComponent},
 
   { path: '**', redirectTo: '', pathMatch: 'full' }, //DEBE SER SIEMPRE LA ULTIMA
 ];
