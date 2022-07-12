@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'conexion_unah';
-/*
+
   constructor(private router: Router){
     if(!localStorage.getItem('token')){
       this.router.navigate(['/login']);
@@ -23,6 +23,7 @@ ngOnInit(): void {
   if(!localStorage.getItem('token')){
     this.router.navigate(['/login']);
   }
-}*/
+}
+
 }
 
