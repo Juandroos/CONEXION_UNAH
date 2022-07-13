@@ -2,6 +2,8 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll'
+import { ScrollingModule} from '@angular/cdk/scrolling';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -61,8 +63,10 @@ import { EditarConstanciaComponent } from './components/editar-constancia/editar
   imports: [
     FormsModule,
     NgImageSliderModule,
+    InfiniteScrollModule,
     ReactiveFormsModule,
     BrowserModule,
+      ScrollingModule,
     AppRoutingModule, 
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module

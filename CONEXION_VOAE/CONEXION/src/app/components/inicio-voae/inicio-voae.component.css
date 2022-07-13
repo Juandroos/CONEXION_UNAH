@@ -17,6 +17,17 @@
 	border-color: blue;
 	opacity: 0.4;
 }
+
+.cont-izq{
+	background: rgba(240, 245, 245, 1);
+	width: 100%;
+	height: 40px;
+	float: left;
+	margin-top: -450px;
+}
+
+
+/*LADO DERECHO*/
 .derecho{
 	background: rgba(189,236,182,1);
 	height: 650px;
@@ -25,11 +36,12 @@
 }
 
 .contenedor{
-	background: rgba(240, 245, 245, 0.45);
-	width: 60%;
-	height: 300px;
+	background: rgba(240, 245, 245, 0.65);
+	width: 80%;
+	height: 500px;
 	margin-top: 30px;
-	margin-left: 20%;
+	margin-left: 10%;
+	border-radius: 20px;
 }
 .contenedor li{
 	float: left;
@@ -38,4 +50,13 @@
 
 .derecho li{
 	list-style: none;
+}
+
+.viewport{
+	margin-top: 50px;
+	height: 80%;
+	width: 80%;
+	margin-left: 10%;
+	border-color: black;
+	border: 1px  black;
 }

@@ -5,26 +5,49 @@
 <div class="izquierdo">
 	<img src="../assets/img/inicio-voae/figura.png">
 
+	<div class="cont-izq">
+		<ul>
+		<a routerLink="/actividad-nueva">Crear Actividad</a>
+		
+	</ul>
+
+	</div>
+	
 	
 </div>
 
 
+
+
+
+
+
+
+
+
+<!--Lado derecho de actividades-->
 <div class="derecho">
 	<h4>Actividades en ejecucion</h4>
-	<div >
-		<ul  >
-		<li *ngFor="let actividad of listActividad">
-			<div class="contenedor">
-				<h4>{{actividad.nombre}}</h4>
-			<li>horas voae: {{actividad.horasArt}} </li>  
-			<li>Area: {{actividad.area}}</li>
-			<li> hora: {{actividad.hora}}</li>
+	<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+		<div >
+			<ul infiniteScroll  (scrolled)="onScroll()" >
+			<li *ngFor="let actividad of listActividad">
+				<div class="contenedor">
+					<h4>{{actividad.nombre}}</h4>
+				<li>horas voae: {{actividad.horasArt}} </li>  
+				<li>Area: {{actividad.area}}</li>
+				<li>hora: {{actividad.hora}}</li>
+				<li>Encargado: {{actividad.encargados}}</li>
 
-			</div>	
-			
-		</li>
+				</div>	
+				
+			</li>
 		</ul>
 	</div>
+
+	</cdk-virtual-scroll-viewport>
+
+	
 	
 	
 </div>
