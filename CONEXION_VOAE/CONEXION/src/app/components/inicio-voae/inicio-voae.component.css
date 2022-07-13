@@ -23,3 +23,19 @@
 	width: 60%;
 	float: right;
 }
+
+.contenedor{
+	background: rgba(240, 245, 245, 0.45);
+	width: 60%;
+	height: 300px;
+	margin-top: 30px;
+	margin-left: 20%;
+}
+.contenedor li{
+	float: left;
+	padding: 10px;
+}
+
+.derecho li{
+	list-style: none;
+}

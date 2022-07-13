@@ -10,9 +10,22 @@
 
 
 <div class="derecho">
-	<div>
-		
+	<h4>Actividades en ejecucion</h4>
+	<div >
+		<ul  >
+		<li *ngFor="let actividad of listActividad">
+			<div class="contenedor">
+				<h4>{{actividad.nombre}}</h4>
+			<li>horas voae: {{actividad.horasArt}} </li>  
+			<li>Area: {{actividad.area}}</li>
+			<li> hora: {{actividad.hora}}</li>
+
+			</div>	
+			
+		</li>
+		</ul>
 	</div>
+	
 	
 </div>
 

@@ -2,6 +2,8 @@ const { request, response } = require('express')
 const { v2 } = require('cloudinary')
 const cloudinary = v2
 const Actividad = require('../models/Actividad')
+var fs= require('fs');
+const path=require('path');
 
 // Configurando las credenciales de cloudanary
 cloudinary.config({
@@ -61,9 +63,11 @@ const eliminarActividad = async (req, res) => {
 }
 
 
+
 module.exports = {
     nuevaActividad,
     subirImagen,
     obtenerActividades,
     eliminarActividad,
+
 }
