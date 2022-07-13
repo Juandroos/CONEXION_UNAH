@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
 // Utilizando el middleware de multer
 app.use(multer({storage}).single('image'));
 
-app.use('/api', require('./routes/usuario'));
+app.use('/api/usuario', require('./routes/usuario'));
 app.use('/api/actividad', require('./routes/actividad'));
 app.use('/api/constancia', require('./routes/constancia'));
 

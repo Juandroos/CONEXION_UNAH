@@ -34,7 +34,36 @@ const subirImagen = async (req = request, res = response) => {
     }
 }
 
+const obtenerActividades = async (req, res) => {
+    try {
+        const actividad = await Actividad.find()
+        res.json(actividad)
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Hubo un error')
+    }
+}
+
+
+const eliminarActividad = async (req, res) => {
+    try {
+        let actividad = await Actividad.findById(req.params.id)
+
+        if (!actividad) {
+            res.status(404).json({ msg: 'No existe actividad' })
+        }
+        await Actividad.findOneAndRemove({ _id: req.params.id })
+        res.json({ msg: 'Actividad Eliminada con exito.' })
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Hubo un error')
+    }
+}
+
+
 module.exports = {
     nuevaActividad,
     subirImagen,
+    obtenerActividades,
+    eliminarActividad,
 }
