@@ -30,7 +30,7 @@
 	<h4>Actividades en ejecucion</h4>
 	<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
 		<div >
-			<ul infiniteScroll  (scrolled)="onScroll()" >
+			<ul>
 			<li *ngFor="let actividad of listActividad">
 				<div class="contenedor">
 					<h4>{{actividad.nombre}}</h4>

@@ -31,7 +31,5 @@ export class InicioVoaeComponent implements OnInit {
     })
   }
 
-  onScroll():void{
-    console.log("scroll");
-  }
+
 }
