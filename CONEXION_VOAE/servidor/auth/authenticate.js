@@ -5,12 +5,12 @@ var moment = require('moment');
 var secret= 'conexionUNAH';
 
 exports.auth= function(req, res, next){
-    //Si no enviamos la variable de authorizaion por el header entonces..
+    /*//Si no enviamos la variable de authorizaion por el header entonces..
     if(!req.headers.authorization){
         return res.status(403).send({
             message: 'No hay Header'
         });
-    }
+    }*/
 
     //Vamos a validar que el token no haya expirado
     var token= req.headers.authorization.replace(/['"]+/g,'');

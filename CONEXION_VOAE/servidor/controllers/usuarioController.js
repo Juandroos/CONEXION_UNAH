@@ -9,6 +9,7 @@ const { enviarEmail } = require('../helpers/sendEmail');
 
 const login_usuario = async function (req,res){
     var data= req.body;
+
     var arr=[];
     arr = await Usuario.find({correo: data.correo});
     if(arr.length==0){
