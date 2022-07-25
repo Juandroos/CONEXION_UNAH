@@ -4,7 +4,6 @@ import { ActividadService } from '../../services/actividad.service';
 
 
 
-
 @Component({
   selector: 'app-inicio-voae',
   templateUrl: './inicio-voae.component.html',
@@ -15,15 +14,16 @@ export class InicioVoaeComponent implements OnInit {
 
   listActividad: ActividadInterface[]=[];
 
-  constructor(private _actividadService: ActividadService) { }
+  constructor(
+    private _actividadService: ActividadService
+    ) { }
 
   ngOnInit(): void {
     this.ObtenerActividad();
-  
   }
 
   ObtenerActividad(){
-    this._actividadService.getActividades().subscribe(data=>{
+    this._actividadService.obtenerActividad().subscribe(data=>{
       console.log(data);
       this.listActividad=data;
     },error=>{
