@@ -23,7 +23,7 @@ export class InicioVoaeComponent implements OnInit {
   }
 
   ObtenerActividad(){
-    this._actividadService.obtenerActividad().subscribe(data=>{
+    this._actividadService.getActividades().subscribe(data=>{
       console.log(data);
       this.listActividad=data;
     },error=>{
