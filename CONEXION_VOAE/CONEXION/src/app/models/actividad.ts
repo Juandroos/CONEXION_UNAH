@@ -1,4 +1,5 @@
 export interface ActividadInterface {
+  _id?: string;
   nombre?: string;
   area?: string;
   horasArt?: number;
