@@ -22,7 +22,6 @@ logout(){
 ngOnInit(): void {
   if(!localStorage.getItem('token')){
     this.router.navigate(['/landing']);
-    this.router.navigate(['/lista-usuarios']);
   }
 }
 

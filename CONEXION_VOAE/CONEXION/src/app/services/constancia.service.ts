@@ -10,6 +10,12 @@ export class ConstanciasService {
   url = 'http://localhost:4000/api/constancia';
 
   constructor(private http: HttpClient) { }
+
+
+  getConstancias(): Observable<any>{
+    return this.http.get(this.url);
+  }
+
   guardarConstancias(constancia: Constancia): Observable<any> {
     return this.http.post(this.url, constancia);
   }

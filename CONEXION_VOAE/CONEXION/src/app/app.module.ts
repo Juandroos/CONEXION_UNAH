@@ -34,6 +34,7 @@ import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-
 import { InicioVoaeComponent } from './components/inicio-voae/inicio-voae.component';
 import { EditarConstanciaComponent } from './components/editar-constancia/editar-constancia.component';
 import { ActividadesVoaeInterfazComponent } from './components/actividades-voae-interfaz/actividades-voae-interfaz.component';
+import { ListarConstanciasVOAEComponent } from './components/listar-constancias-voae/listar-constancias-voae.component';
 
 
 
@@ -61,6 +62,7 @@ import { ActividadesVoaeInterfazComponent } from './components/actividades-voae-
     InicioVoaeComponent,
     EditarConstanciaComponent,
     ActividadesVoaeInterfazComponent,
+    ListarConstanciasVOAEComponent,
   ],
   imports: [
     FormsModule,

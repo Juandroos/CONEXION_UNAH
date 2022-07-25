@@ -25,6 +25,7 @@ import { InformacionPersonalComponent } from './components/informacion-personal/
 import { ActividadComponent } from './components/actividad/actividad.component';
 import { ActividadNuevaComponent } from './components/actividad-nueva/actividad-nueva.component';
 import { ActividadesVoaeInterfazComponent } from './components/actividades-voae-interfaz/actividades-voae-interfaz.component';
+import { ListarConstanciasVOAEComponent } from './components/listar-constancias-voae/listar-constancias-voae.component';
 
 
 
@@ -53,7 +54,10 @@ const routes: Routes = [
   { path: 'actividades-interfaz', component: ActividadesInterfazComponent },
   { path: 'actividad', component: ActividadComponent },
   { path: 'inicio-voae', component: InicioVoaeComponent},
-  { path: 'editar-constancia', component: EditarConstanciaComponent},
+  
+  { path: 'listar-constanciasvoae',component: ListarConstanciasVOAEComponent},
+  { path: 'crear-constancia', component: EditarConstanciaComponent},
+  { path: 'editar-constancia/:id', component: EditarConstanciaComponent},
   
   // Actividades VOAE Routes
   { path: 'actividades-voae', component: ActividadesVoaeInterfazComponent},

@@ -8,7 +8,7 @@ import { JwtResponseI } from '../models/jwt-response';
   providedIn: 'root',
 })
 export class UsuarioService {
-  url = 'http://localhost:4000/api/';
+  url = 'http://localhost:4000/api/usuario/';
   constructor(private http: HttpClient) {}
 
   getUsuarios(): Observable<any> {
