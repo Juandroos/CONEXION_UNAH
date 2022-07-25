@@ -1,6 +1,7 @@
 <div class="container">
     <div class="text-center mt-3">
-        <h4>CREAR ACTIVIDAD</h4>
+        <h4 *ngIf="!edit" >CREAR ACTIVIDAD</h4>
+        <h4 *ngIf="edit" >EDITAR ACTIVIDAD</h4>
     </div>
 
     <div class="row">

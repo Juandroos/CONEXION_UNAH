@@ -2,8 +2,8 @@ const { request, response } = require('express')
 const { v2 } = require('cloudinary')
 const cloudinary = v2
 const Actividad = require('../models/Actividad')
-var fs= require('fs');
-const path=require('path');
+var fs = require('fs');
+const path = require('path');
 
 // Configurando las credenciales de cloudanary
 cloudinary.config({
@@ -36,6 +36,32 @@ const subirImagen = async (req = request, res = response) => {
     }
 }
 
+// Controlador para obtener una actividad
+const obtenerActividad = async (req, res) => {
+    try {
+        const id = req.params.id
+        const actividad = await Actividad.findById(id)
+        res.json(actividad)
+    } catch (error) {
+        res.status(500).json({ msg: 'No se pudo obtener la actividad' })
+        console.log(error)
+    }
+}
+
+//  Controlador para actualizar una actividad
+const actualizarActividad = async (req, res) => {
+    try {
+        const id = req.params.id
+        const body = req.body
+        const actividad = await Actividad.findByIdAndUpdate(id, body, { new: true })
+        res.json(actividad)
+    } catch (error) {
+        res.status(500).json({ msg: 'No se pudo actualizar la actividad' })
+        console.log(error)
+    }
+}
+
+
 const obtenerActividades = async (req, res) => {
     try {
         const actividad = await Actividad.find()
@@ -49,13 +75,9 @@ const obtenerActividades = async (req, res) => {
 
 const eliminarActividad = async (req, res) => {
     try {
-        let actividad = await Actividad.findById(req.params.id)
-
-        if (!actividad) {
-            res.status(404).json({ msg: 'No existe actividad' })
-        }
-        await Actividad.findOneAndRemove({ _id: req.params.id })
-        res.json({ msg: 'Actividad Eliminada con exito.' })
+        const id = req.params.id
+        const actividad = await Actividad.findByIdAndDelete(id)
+        res.json(actividad)
     } catch (error) {
         console.log(error)
         res.status(500).send('Hubo un error')
@@ -69,5 +91,6 @@ module.exports = {
     subirImagen,
     obtenerActividades,
     eliminarActividad,
-
+    obtenerActividad,
+    actualizarActividad
 }
