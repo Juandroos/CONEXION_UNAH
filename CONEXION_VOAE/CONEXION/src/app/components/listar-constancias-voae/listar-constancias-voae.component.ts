@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Constancia } from 'src/app/models/constancia';
 import { ConstanciasService } from 'src/app/services/constancia.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar-constancias-voae',
@@ -23,6 +24,18 @@ export class ListarConstanciasVOAEComponent implements OnInit {
     },error =>{
       console.log(error);
     })
+  }
+
+
+  eliminarConstancia(id: any){
+    this._constanciaService.eliminarConstancia(id).subscribe(data => {
+        Swal.fire(
+          '¡La constancia se eliminó!',
+        );
+        this.obtenerConstancias();
+      }, error =>{
+        console.log(error);
+      })
   }
 
 }

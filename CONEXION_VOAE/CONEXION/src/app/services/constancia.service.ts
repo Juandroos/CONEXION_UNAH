@@ -7,7 +7,7 @@ import { Constancia } from '../models/constancia';
   providedIn: 'root'
 })
 export class ConstanciasService {
-  url = 'http://localhost:4000/api/constancia';
+  url = 'http://localhost:4000/api/constancia/';
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +18,18 @@ export class ConstanciasService {
 
   guardarConstancias(constancia: Constancia): Observable<any> {
     return this.http.post(this.url, constancia);
+  }
+
+  eliminarConstancia(id: string): Observable<any>{
+    return this.http.delete(this.url + id);
+  }
+
+  obtenerConstancia(id: string): Observable<any>{
+    return this.http.get(this.url + id);
+  }
+
+  editarConstancia(id: string, constancia: Constancia): Observable<any>{
+    return this.http.put(this.url + id, constancia)
   }
   }
 
