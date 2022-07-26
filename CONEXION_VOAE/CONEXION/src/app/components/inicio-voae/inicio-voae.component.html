@@ -2,37 +2,21 @@
 <div id="superior">
 	
 </div>
+
 <div class="izquierdo">
 	<img src="../assets/img/inicio-voae/figura.png">
 
-	<div class="cont-izq">
-		<ul>
-		<a routerLink="/actividad-nueva">Crear Actividad</a>
-		
-	</ul>
-
-
-
-<div class="derecho">
-	<div>
-		
-
+		<div class="cont-izq">
+			<ul>
+			<a router-outlet="/actividad-nueva">Crear Actividad</a>
+			
+		</ul>
 	</div>
-	
 </div>
 
 
-
-
-
-
-
-
-
-
-<!--Lado derecho de actividades-->
 <div class="derecho">
-	<h4>Actividades en ejecucion</h4>
+	<h3>Actividades en ejecucion</h3>
 	<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
 		<div >
 			<ul>
@@ -43,6 +27,7 @@
 				<li>Area: {{actividad.area}}</li>
 				<li>hora: {{actividad.hora}}</li>
 				<li>Encargado: {{actividad.encargados}}</li>
+				<img src="">
 
 				</div>	
 				
@@ -53,10 +38,6 @@
 	</cdk-virtual-scroll-viewport>
 
 	
-	
-	
 </div>
-
-	
 
 
