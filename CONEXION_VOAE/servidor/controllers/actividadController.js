@@ -86,6 +86,7 @@ const eliminarActividad = async (req, res) => {
 
 
 
+
 module.exports = {
     nuevaActividad,
     subirImagen,

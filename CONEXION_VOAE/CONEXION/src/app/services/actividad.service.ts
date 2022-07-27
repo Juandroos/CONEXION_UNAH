@@ -35,6 +35,6 @@ export class ActividadService {
   getActividades(): Observable<ActividadInterface[]> {
     return this.http.get<ActividadInterface[]>(this.url + '/obtener');
   }
-
+  
 
 }

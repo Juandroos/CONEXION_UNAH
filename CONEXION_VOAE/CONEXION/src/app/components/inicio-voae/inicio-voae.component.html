@@ -6,29 +6,36 @@
 <div class="izquierdo">
 	<img src="../assets/img/inicio-voae/figura.png">
 
-		<div class="cont-izq">
-			<ul>
-			<a router-outlet="/actividad-nueva">Crear Actividad</a>
-			
-		</ul>
-	</div>
 </div>
 
 
 <div class="derecho">
-	<h3>Actividades en ejecucion</h3>
+	<h2>Actividades en ejecucion</h2>
 	<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
 		<div >
 			<ul>
 			<li *ngFor="let actividad of listActividad">
 				<div class="contenedor">
-					<h4>{{actividad.nombre}}</h4>
-				<li>horas voae: {{actividad.horasArt}} </li>  
-				<li>Area: {{actividad.area}}</li>
-				<li>hora: {{actividad.hora}}</li>
-				<li>Encargado: {{actividad.encargados}}</li>
-				<img src="">
+					<h3>{{actividad.nombre}}</h3>
+				<li><b>Direccion o Plataforma:</b> {{actividad.direccionPlataforma | titlecase}}</li>
+				<li><b>Encargado:</b> {{actividad.encargados}}</li>
+				<li><b>Modalidad:</b> {{actividad.modalidad | titlecase}}</li>
+				<li><b>horas voae:</b> {{actividad.horasArt}} Hras</li>  
+				<li><b>Area:</b> {{actividad.area}}</li>
+				<li><b>hora:</b> {{actividad.hora}}</li>
+				
+				<li><b>Fecha:</b> {{actividad.fecha | date}} <li>
+				
+				
+				<img src={{actividad.urlImagen}}>
 
+
+                 <div class="d-flex flex-row-reverse">
+                    <!-- Delete Button -->
+                    <button class="btn btn-danger" (click)="eliminarActividad(actividad._id!, actividad.nombre!)">Eliminar</button>
+                    <!-- Edit Button -->
+                    <button class="btn btn-primary mx-2" (click)="editarActividad(actividad._id!)">Editar</button>
+                </div>
 				</div>	
 				
 			</li>
