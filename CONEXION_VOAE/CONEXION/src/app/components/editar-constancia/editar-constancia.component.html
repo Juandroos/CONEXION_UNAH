@@ -25,11 +25,11 @@
                                 <div><p align = "justify" class="fw-normal" style="line-height: 90%" >La Vicerrectoría de Orientación y Asuntos Estudiantiles de la Universidad Nacional 
                                 Autónoma de Honduras, HACE CONSTAR QUE:<br><br> <input type="text" formControlName="nombre" class="form-control" class = "col-sm-5">
                                 Estudiante de la carrera de: <input type="text" formControlName="carrera" class="form-control" class = "col-sm-4" ><br><br>
-                                Con número de cuenta: <input type="number" formControlName="cuenta" class="form-control" class=" col-sm-3" >
+                                Con número de cuenta: <input type="number" min="1" formControlName="cuenta" class="form-control" class=" col-sm-3" >
                                 ha participado durante su proceso 
                                 formativo en la actividad denominada <br><br><input type="text" formControlName="actividad" class="form-control" class ="col-sm-5"> ,
                                 como parte de las actividades establecidas en el Artículo 140 de las Normas<br><br> Académicas de la 
-                                UNAH; en dicho evento el (la) estudiante acumuló <input type="number" formControlName="horas" class="form-control" class=" col-sm-1"> horas
+                                UNAH; en dicho evento el (la) estudiante acumuló <input type="number" min="0" max="15"formControlName="horas" class="form-control" class=" col-sm-1"> horas
                                 cubriendo así el ámbito <input type="text" formControlName="ambito" class="form-control" class = "col-sm-2" > </p>
 
                                 <p align = "justify" class="fw-normal" style="line-height: 90%" > <br>La presente constancia se extiende conforme datos recibidos desde la unidad académica 

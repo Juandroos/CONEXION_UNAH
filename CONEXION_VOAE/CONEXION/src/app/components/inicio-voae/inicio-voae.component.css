@@ -79,10 +79,7 @@ franja-amarilla{
 
 
 /*div de las actividades*/
-.div-busqueda{
-    text-align: center;
-    background-color: #CDDDE4;
-}
+
 
 .input-busqueda{
     background-color: #51889F; 
@@ -102,15 +99,6 @@ franja-amarilla{
     transition-delay: 0.25s;
   }
 
-  .div-actividad{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    background-color: #9BBBC9;
-    border-radius: 25px;
-    color: #065471;
-    text-align: start;
-  }
   .span-contenido-act{
     font-weight:500;
     margin-right: 45px;
@@ -141,7 +129,7 @@ franja-amarilla{
 	text-align: center;
 }
 .contenedor{
-	background: rgba(240, 245, 245, 0.65);
+	background: rgba(240, 245, 245, 0.48);
 	width: 80%;
 	height: 512px;
 	margin-top: 20px;
@@ -159,7 +147,7 @@ franja-amarilla{
 
 .viewport{
 	margin-top: 50px;
-	height: 80%;
+	height: 85%;
 	width: 95%;
 	margin-left: 2%;
 	border-color: black;
